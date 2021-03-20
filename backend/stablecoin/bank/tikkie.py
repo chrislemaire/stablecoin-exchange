@@ -8,7 +8,7 @@ class Tikkie(Bank):
         "Returns payment destiation if successful"
 
         ans = self.create_request(amount=amount, description="EuroToken Exchange", referenceId=payment_id.replace("=", "_"))
-        return {v:ans[k] for k, v in { 'url': 'url', 'paymentRequestToken': 'payment_id'}.items()}
+        return {v: ans[k] for k, v in { 'url': 'url', 'paymentRequestToken': 'payment_id'}.items()}
 
     def initiate_payment(self, account, amount, payment_id):
         self.logger.info(f"PAYOUT: {amount} to {account}")

@@ -40,4 +40,13 @@ class PaymentSystem(ABC):
         "Returns true if succesful"
         pass
 
+    "Bookkeeping functions"
+
+    @abstractmethod
+    def list_transactions(self, account):
+        pass
+
+    @abstractmethod
+    def get_available_balance(self):
+        pass
 
